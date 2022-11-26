@@ -16,4 +16,5 @@ steps :
   - usres : action/checkout@v3
   -name: "login to docker hub"
   run: dockerlogin --username ${{ secrets.docker-USERNAME}} --password ${{DOCKERTOKEN}}  
-  
+  -NAME : "Build docker image "
+  run : docker push ${{ secrets.docker-USERNAME}}/myimage
