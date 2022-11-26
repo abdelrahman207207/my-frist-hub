@@ -15,6 +15,6 @@ runs-on : ubinto-lastest
 steps :
   - usres : action/checkout@v3
   -name: "login to docker hub"
-  run: dockerlogin --username ${{ secrets.docker-USERNAME}} --password ${{DOCKERTOKEN}}  
+  run: dockerlogin --username ${{ secrets.docker-USRNAME}} --password ${{DOCKERTOKEN}}  
   -NAME : "Build docker image "
-  run : docker push ${{ secrets.docker-USERNAME}}/myimage
+  run : docker push ${{ secrets.docker-USRNAME}}/myimage

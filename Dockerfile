@@ -1,6 +1,5 @@
-FROM alpine
-WORKDIR /app
-COPY abdalla.java .
-run apk install --update nodejs
-run apk install --update npm
-CMD node name.js
+FROM openjdk
+WORKDIR /application
+COPY abdo.java .
+RUN javac abdo.java
+CMD java abdo
