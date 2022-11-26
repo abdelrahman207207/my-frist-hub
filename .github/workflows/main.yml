@@ -13,9 +13,7 @@ jobs :
 build :
 runs-on : ubinto-lastest
 steps :
-  - name: 'testing github action '
-  run : pwd 
-
-  - name: 'testing printing '
-  run : echo abdo
-
+  - usres : action/checkout@v3
+  -name: "login to docker hub"
+  run: dockerlogin --username ${{ secrets.docker-USERNAME}} --password ${{DOCKERTOKEN}}  
+  
